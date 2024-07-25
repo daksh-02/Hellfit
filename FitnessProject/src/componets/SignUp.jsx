@@ -57,7 +57,7 @@ function SignUp(data) {
     }
   };
   return (
-    <div className="flex mt-2 w-full h-3/4">
+    <div className="flex mt-5 mx-10 w-full h-3/4">
       <div className="flex-1 mt-auto mb-auto h-full">
         <h1 className="text-6xl">Welcome</h1>
         <h3>Welcome! Please enter your details</h3>

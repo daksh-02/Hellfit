@@ -17,7 +17,7 @@ function Login() {
     try {
       const response = await fetch(`${localHost}/users/login`, {
         method: "POST",
-        credentials: 'include',
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },
@@ -26,13 +26,13 @@ function Login() {
       const res = await response.json();
       dispatch(setEverything(res.data.user));
       console.log(res);
-      navigate('/');
+      navigate("/");
     } catch (error) {
-      alert("Enter valid user details")
+      alert("Enter valid user details");
     }
   };
   return (
-    <div className="flex w-full h-3/4 mt-5">
+    <div className="flex w-full h-3/4 mt-5 mx-10">
       <div className="flex-1 h-full mt-auto mb-auto">
         <h1 className="text-6xl">Welcome Back</h1>
         <h3 className="p-2">Welcome back! Please enter your details</h3>
@@ -46,7 +46,7 @@ function Login() {
               {...register("username", {
                 required: true,
               })}
-              className = "w-5/6"
+              className="w-5/6 "
             />
             <Input
               label="Email: "
@@ -64,7 +64,7 @@ function Login() {
               {...register("password", {
                 required: true,
               })}
-              className = "w-5/6"
+              className="w-5/6"
             />
             <Button type="submit" className="w-1/2 mt-8" bgColor="bg-[#FF2625]">
               Login

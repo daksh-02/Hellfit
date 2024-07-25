@@ -105,8 +105,12 @@ const loginUser = asyncHandler(async (req, res) => {
 
   const options = {
     httpOnly: true,
-    // sameSite:none,
-    // secure : true
+    secure: process.env.NODE_ENV === "production", // Ensure the cookie is only sent over HTTPS in production
+    sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // 'None' for cross-site requests in production
+    domain:
+      process.env.NODE_ENV === "production"
+        ? "backend-v2-vert.vercel.app"
+        : undefined, // Set your domain in production
   };
 
   return res
