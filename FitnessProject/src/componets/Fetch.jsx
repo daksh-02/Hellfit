@@ -2,9 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateUserData } from "../store/APISlice.js";
 
-
 const Fetch = () => {
-
   const searchValue = useSelector((state) => state.Api?.search);
   const dispatch = useDispatch();
   const [currentSearch, setCurrentSearch] = useState(searchValue);
@@ -14,7 +12,6 @@ const Fetch = () => {
       currentSearch.length > 0
         ? `https://exercisedb.p.rapidapi.com/exercises/${currentSearch[0]}/${currentSearch[1]}?limit=1400`
         : "https://exercisedb.p.rapidapi.com/exercises?limit=1400";
-    console.log(url);
     const options = {
       method: "GET",
       headers: {
@@ -26,9 +23,7 @@ const Fetch = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log(result);
       dispatch(updateUserData(result));
-
     } catch (error) {
       console.error(error);
     }
@@ -42,7 +37,7 @@ const Fetch = () => {
     setCurrentSearch(searchValue);
   }, [searchValue]);
 
-  return null; 
+  return null;
 };
 
 export default Fetch;

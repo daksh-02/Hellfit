@@ -11,11 +11,9 @@ const APISlice = createSlice({
     reducers: {
         updateUserData: (state, action) => {
           state.userData = action.payload;
-          console.log(state.userData)
         },
         updateSearch: (state, action) => {
           state.search = action.payload;
-          console.log(state.search)
         },
       },
 })

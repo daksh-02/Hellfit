@@ -43,7 +43,6 @@ function UpdateDetails() {
       });
 
       const res = await result.json();
-      console.log(res);
       dispatch(setUsername(res.data.username));
       dispatch(setEmail(res.data.email));
       alert("Details Updated Successfully");

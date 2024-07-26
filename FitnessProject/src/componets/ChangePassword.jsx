@@ -43,7 +43,6 @@ function ChangePassword() {
       });
 
       const res = await result.json();
-      console.log(res);
       alert("Password changed successfully");
       closePasswordModal();
     } catch (error) {

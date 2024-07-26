@@ -34,7 +34,6 @@ const WorkoutCard = ({ data, isCurrentDay }) => {
 
       const res = await response.json();
       dispatch(setWorkOutSplit(res.data.workOutSplit));
-      console.log(res);
       alert(res.message);
     } catch (error) {
       alert("Something went wrong");

@@ -47,7 +47,6 @@ const UserSlice = createSlice({
     },
     setWorkOutSplit(state, action) {
       state.workOutSplit = action.payload;
-      console.log(state.workOutSplit);
       localStorage.setItem('user', JSON.stringify(state));
     },
     setWorkOutCompletedCount(state, action) {

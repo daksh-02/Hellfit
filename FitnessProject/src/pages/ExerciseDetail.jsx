@@ -139,7 +139,6 @@ const ExerciseDetail = () => {
     if (res.data.user) {
       dispatch(setWorkOutSplit(res.data.user.workOutSplit));
     }
-    console.log(res);
     alert("Exercise added to your WorkOut plan");
     closeModal();
   };
@@ -296,7 +295,6 @@ const getExerciseByID = async (id) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
     return result;
   } catch (error) {
     console.error(error);
@@ -337,7 +335,6 @@ const getExerciseByEquipment = async (equipment) => {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
     return result;
   } catch (error) {
     console.error(error);

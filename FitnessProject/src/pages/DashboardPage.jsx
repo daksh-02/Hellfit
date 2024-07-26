@@ -24,7 +24,6 @@ const DashboardPage = () => {
     });
     const res = await response.json();
     dispatch(logout());
-    console.log(res);
     alert("User successfully logged out");
     navigate("/");
   };

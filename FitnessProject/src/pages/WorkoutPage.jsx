@@ -36,7 +36,6 @@ function WorkoutPage() {
       days.forEach((day) => map.set(day, []));
 
       plan.forEach((planObj) => map.get(planObj.day).push(planObj));
-      console.log(map);
       setTrainingPlan(map);
     };
 

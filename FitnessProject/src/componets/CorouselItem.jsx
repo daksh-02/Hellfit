@@ -12,7 +12,6 @@ function CarouselItem({ text }) {
       text = text.replace(/ /g, "%20").toLowerCase();
       result = ["bodyPart", text];
     }
-    console.log(result);
     dispatch(updateSearch(result));
   }
 

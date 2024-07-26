@@ -39,7 +39,6 @@ function UpdateAvatarImage() {
       }
 
       const res = await response.json();
-      console.log(res);
       dispatch(setAvatar(res.data.avatar));
       closeAvatarModal();
     } else {
