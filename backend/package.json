@@ -4,7 +4,7 @@
   "description": "backend for gym website",
   "type": "module",
   "main": "index.js",
-"scripts": {
+  "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
     "start": "node src/index.js",
     "build": "echo 'No build step required'"
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cloudinary": "^2.1.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",

@@ -109,7 +109,7 @@ const loginUser = asyncHandler(async (req, res) => {
     sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax", // 'None' for cross-site requests in production
     domain:
       process.env.NODE_ENV === "production"
-        ? "backend-v2-vert.vercel.app"
+        ? "hellfit-backed.vercel.app"
         : undefined, // Set your domain in production
   };
 

@@ -5,7 +5,8 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 const corsOptions = {
-  origin: true, //included origin as true
+  origin : "https://hellfit.vercel.app",
+  // origin: true, //included origin as true
   credentials: true, //included credentials as true
 };
 

@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs"; // Updated import
 import jwt from "jsonwebtoken";
 
 const userSchema = new Schema(
@@ -54,9 +54,9 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-userSchema.methods.isPasswordCorrect = async function(password){
-  return await bcrypt.compare(password, this.password)
-}
+userSchema.methods.isPasswordCorrect = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
 
 userSchema.methods.generateAccessToken = function () {
   return jwt.sign(
@@ -72,6 +72,7 @@ userSchema.methods.generateAccessToken = function () {
     }
   );
 };
+
 userSchema.methods.generateRefreshToken = function () {
   return jwt.sign(
     {

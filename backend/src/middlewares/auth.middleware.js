@@ -57,7 +57,7 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
           sameSite: process.env.NODE_ENV === "production" ? "None" : "Lax",
           domain:
             process.env.NODE_ENV === "production"
-              ? "backend-v1-inky.vercel.app"
+              ? "hellfit-backed.vercel.app"
               : undefined,
         };
 
