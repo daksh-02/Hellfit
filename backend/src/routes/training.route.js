@@ -4,11 +4,11 @@ import {
   deleteTrainingObject,
   getTrainingObject,
 } from "../controllers/training.controller.js";
-import { verifyJwt } from "../middlewares/auth.middleware.js";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
-router.use(verifyJwt);
+router.use(verifyJWT);
 
 router.route("/exercise").post(createTrainingObject);
 
