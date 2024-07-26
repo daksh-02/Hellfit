@@ -4,10 +4,10 @@
   "description": "backend for gym website",
   "type": "module",
   "main": "index.js",
-  "scripts": {
+"scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
-    "build": "echo 'No build step required'",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "echo 'No build step required'"
   },
   "keywords": [
     "js",
