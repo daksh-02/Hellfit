@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import defUser from "../images/user.jpg";
-import Logo from "../images/Logo.png";
+import Logo from "../images/logo.png";
 function Navbar() {
   const isLoggedIn = useSelector((state) => state.UserInfo.isLoggedIn);
   const avatar = useSelector((state) => state.UserInfo.avatar);
